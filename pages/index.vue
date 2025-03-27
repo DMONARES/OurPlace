@@ -7,8 +7,9 @@
 </script>
 
 <template>
-	<div>
-	</div>
+	<main>
+		<SectionHero />
+	</main>
 </template>
 
 <style lang='scss'>

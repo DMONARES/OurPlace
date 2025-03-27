@@ -1,7 +1,5 @@
 <script setup>
 	const props = defineProps({
-		variant: String, // default, border
-		size: String, // default, xl
 		disabled: Boolean,
 	});
 </script>
@@ -9,10 +7,6 @@
 <template>
 	<button
 		class="ui-button"
-		:class="{
-			'border': variant === 'border',
-			'xl': size === 'xl',
-		}"
 		:disabled="disabled"
 	>
 		<slot />
@@ -25,14 +19,17 @@
 		// base styles
 		cursor: pointer;
 		border: none;
-		padding: 12px 24px;
+		padding: 20px 40px;
 		border: 1px solid transparent;
-		border-radius: 4px;
-		background-color: $black;
+		border-radius: 0;
+		background-color: $accent;
 		color: $white;
-		font-size: 1rem;
-
-		@include transition();
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 20.4px;
+		letter-spacing: .5px;
+		transition: .3s;
 
 		// effects
 		&:disabled
@@ -41,23 +38,5 @@
 			opacity: .7;
 		}
 		&:hover { opacity: .8; }
-
-		// sizes
-		&.xl { padding: 20px 64px; }
-
-		// variants
-		&.border
-		{
-			background-color: transparent;
-			border-color: $black;
-			color: $black;
-
-			&:hover
-			{
-				opacity: 1;
-				background-color: $black;
-				color: $white;
-			}
-		}
 	}
 </style>
