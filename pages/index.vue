@@ -10,6 +10,8 @@
 	<main>
 		<SectionHero />
 		<SectionPartners />
+		<SectionText />
+		<SectionProducts />
 	</main>
 </template>
 
