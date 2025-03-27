@@ -9,6 +9,7 @@
 <template>
 	<main>
 		<SectionHero />
+		<SectionPartners />
 	</main>
 </template>
 
