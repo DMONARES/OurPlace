@@ -9,6 +9,7 @@
 
 <template>
 	<div class="default-layout">
+		<Banner />
 		<Header />
 		<main>
 			<slot />
